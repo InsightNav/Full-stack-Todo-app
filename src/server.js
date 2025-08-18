@@ -6,7 +6,7 @@ import todoRoutes from './routes/todoRoutes.js'
 import authMiddleware from './middleware/authMiddleware.js'
 
 const app = express()
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 3000
 
 //FILE NAME
 const __filename = fileURLToPath(import.meta.url)
@@ -28,6 +28,6 @@ app.get('/',(req,res)=>{
 app.use('/auth', authRoutes)
 app.use('/todos',authMiddleware, todoRoutes)
 
-app.listen(PORT, () => {
-  console.log(`Server has started on port : ${PORT}`)
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Server has started on http://0.0.0.0:${PORT}`);
 })

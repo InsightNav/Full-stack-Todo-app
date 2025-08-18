@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 # Expose the port that the app runs on
-EXPOSE 5000
+EXPOSE 3000
 
 # Define command to run the app
-CMD ["node", "./src/server.js"]
+CMD ["sh", "./start.sh"]

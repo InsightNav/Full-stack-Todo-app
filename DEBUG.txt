@@ -1,0 +1,3 @@
+## when you get error message like tables not found run this script ##
+docker exec -it todo-app npx prisma migrate deploy
+##in the projecr folder#

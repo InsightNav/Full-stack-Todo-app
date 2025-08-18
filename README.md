@@ -49,7 +49,7 @@ If you want to boot it up without it commandeering your terminal (you'll have to
 
 9. **Access the App**:
 
-Open `http://localhost:5000` (or `localhost:3000` if changed) in your browser to see the frontend. You can register, log in, and manage your todo list from there.
+Open `http://localhost:3000` (or `localhost:5000` if changed) in your browser to see the frontend. You can register, log in, and manage your todo list from there.
 
 ## Emulating HTTP Requests (REST Client)
 
@@ -71,3 +71,11 @@ The `todo-app.rest` file includes requests for:
 2. Open `todo-app.rest`.
 3. Run the requests by clicking on the "Send Request" link above each block of HTTP code.
 4. Make sure to copy the token from the login response and replace `{{token}}` with the actual JWT token for protected routes.
+   
+<---------------------------------------------###UPDATED###---------------------------------------------------------->
+### How to set up for LAN (For development)
+1. Make Sure your Wifi network property is set to private(IMPORTANT/can be turned off when done testing)
+2. RUN For windows: Powershell as admin then run this script :  netsh advfirewall firewall add rule name="DOCKER_TODO_APP" dir=in action=allow protocol=TCP localport=<PORT(ex:3000)>(you can access the app in website by typing URL:[ http://<yourHOSTip>PORT ]  {to get host ip type: ipconfig in cmd}
+3. After testing to close the port in powershell admin type : netsh advfirewall firewall delete rule name=DOCKER_TODO_APP" (it closes the ip)
+4. Refer to DEBUG.txt for debugging related to database( hopefully i fixed the code before you are to see that 😁 )
+
